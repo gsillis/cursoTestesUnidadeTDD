@@ -50,5 +50,23 @@ class AvaliadorTests: XCTestCase {
         XCTAssertEqual(1000.0, leiloeiro.menorLance())
         XCTAssertEqual(1000.0, leiloeiro.maiorLance())
     }
-
+    
+    func testeDeveEncontrarOsTreisMaiores( ) {
+        let joao = Usuario(nome: "Joao")
+        let maria = Usuario(nome: "Maria")
+        let joaquim = Usuario(nome: "Joaquim")
+        
+        let leilao = Leilao(descricao: "Playstantion 4")
+        
+        leilao.proposta(oferta: Lances(usuario: joao, valor: 400.0))
+        leilao.proposta(oferta: Lances(usuario: maria, valor: 600.0))
+        leilao.proposta(oferta: Lances(usuario: joaquim, valor: 100.0))
+        
+        let leiloeiro = Avaliador( )
+        leiloeiro.avalia(leilao: leilao)
+        
+        let listaDeValores = leiloeiro.tresMaiores( )
+        
+        XCTAssertEqual(3, listaDeValores.count)
+    }
 }
