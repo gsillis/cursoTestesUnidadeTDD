@@ -130,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				DE559B692645740F00F2363B /* auctionAppTests.swift */,
-				DE559B6B2645740F00F2363B /* Info.plist */,
 				DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */,
+				DE559B6B2645740F00F2363B /* Info.plist */,
 			);
 			path = auctionAppTests;
 			sourceTree = "<group>";

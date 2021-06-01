@@ -11,23 +11,37 @@ import XCTest
 class auctionAppTests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+       
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDeveReceberUmLance() {
+        let leilao = Leilao(descricao: "Macbook Pro M1")
+        XCTAssertEqual(0, leilao.lance?.count)
+        
+        let nome = Usuario(nome: "Gabriela")
+        leilao.proposta(oferta: Lances(usuario: nome, valor: 10.000))
+        
+        XCTAssertEqual(1, leilao.lance?.count)
+        XCTAssertEqual(10.000, leilao.lance?.first?.valor)
+        
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testDeveReceberVariosLances() {
+        let leilao = Leilao(descricao: "Macbook Pro 2020 M1")
+        
+        let nome1 = Usuario(nome: "Denner")
+        let nome2 = Usuario(nome: "Gabriela")
+        
+        leilao.proposta(oferta: Lances(usuario: nome1, valor: 10.000))
+        leilao.proposta(oferta: Lances(usuario: nome2, valor: 12.000))
+        
+        XCTAssertEqual(2, leilao.lance?.count)
+        
+        XCTAssertEqual(10.000, leilao.lance?.first?.valor)
+        XCTAssertEqual(12.000, leilao.lance?[1].valor)
     }
-
 }

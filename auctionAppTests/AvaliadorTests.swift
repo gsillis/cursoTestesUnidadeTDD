@@ -18,7 +18,7 @@ class AvaliadorTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testeDeveEntenderLancesEmOrdemCrescente() throws {
+    func testDeveEntenderLancesEmOrdemCrescente() throws {
         let joao = Usuario(nome: "Joao")
         let maria = Usuario(nome: "Maria")
         let jose = Usuario(nome: "Jose")
@@ -51,7 +51,7 @@ class AvaliadorTests: XCTestCase {
         XCTAssertEqual(1000.0, leiloeiro.maiorLance())
     }
     
-    func testeDeveEncontrarOsTreisMaiores( ) {
+    func testDeveEncontrarOsTreisMaiores( ) {
         let joao = Usuario(nome: "Joao")
         let maria = Usuario(nome: "Maria")
         let joaquim = Usuario(nome: "Joaquim")
