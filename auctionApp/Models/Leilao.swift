@@ -19,9 +19,15 @@ class Leilao {
     }
     
     func proposta(oferta: Lances) {
-        lance?.append(oferta)
+        
+        guard let listaDeLance = lance else {return}
+        if listaDeLance.count == 0 || ultimoLance(listaDeLance).usuario != oferta.usuario {
+            lance?.append(oferta)
+        }
     }
     
+    private func ultimoLance(_ lance: [Lances])  -> Lances {
+        return lance[lance.count - 1]
+    }
 }
-
 

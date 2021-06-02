@@ -14,13 +14,13 @@
 		DE559B5A2645740C00F2363B /* auctionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE559B582645740C00F2363B /* auctionApp.xcdatamodeld */; };
 		DE559B5C2645740E00F2363B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE559B5B2645740E00F2363B /* Assets.xcassets */; };
 		DE559B5F2645740E00F2363B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE559B5D2645740E00F2363B /* LaunchScreen.storyboard */; };
-		DE559B6A2645740F00F2363B /* auctionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B692645740F00F2363B /* auctionAppTests.swift */; };
 		DE559B752645740F00F2363B /* auctionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B742645740F00F2363B /* auctionAppUITests.swift */; };
 		DE559B862645751500F2363B /* Lances.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B852645751500F2363B /* Lances.swift */; };
 		DE559B882645752400F2363B /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B872645752400F2363B /* Usuarios.swift */; };
 		DE559B8A2645754700F2363B /* Leilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B892645754700F2363B /* Leilao.swift */; };
 		DE559B8C2645794200F2363B /* Avaliador.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B8B2645794200F2363B /* Avaliador.swift */; };
 		DE559B8E2645ADBF00F2363B /* AvaliadorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */; };
+		DECDD7E52667DC8C007F9A73 /* AuctionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B692645740F00F2363B /* AuctionAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		DE559B5E2645740E00F2363B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE559B602645740E00F2363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE559B652645740F00F2363B /* auctionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = auctionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE559B692645740F00F2363B /* auctionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auctionAppTests.swift; sourceTree = "<group>"; };
+		DE559B692645740F00F2363B /* AuctionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionAppTests.swift; sourceTree = "<group>"; };
 		DE559B6B2645740F00F2363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE559B702645740F00F2363B /* auctionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = auctionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE559B742645740F00F2363B /* auctionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auctionAppUITests.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		DE559B682645740F00F2363B /* auctionAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE559B692645740F00F2363B /* auctionAppTests.swift */,
+				DE559B692645740F00F2363B /* AuctionAppTests.swift */,
 				DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */,
 				DE559B6B2645740F00F2363B /* Info.plist */,
 			);
@@ -315,8 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE559B6A2645740F00F2363B /* auctionAppTests.swift in Sources */,
 				DE559B8E2645ADBF00F2363B /* AvaliadorTests.swift in Sources */,
+				DECDD7E52667DC8C007F9A73 /* AuctionAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

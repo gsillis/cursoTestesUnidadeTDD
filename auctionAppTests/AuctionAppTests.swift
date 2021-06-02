@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import auctionApp
 
 class auctionAppTests: XCTestCase {
@@ -43,5 +44,19 @@ class auctionAppTests: XCTestCase {
         
         XCTAssertEqual(10.000, leilao.lance?.first?.valor)
         XCTAssertEqual(12.000, leilao.lance?[1].valor)
+    }
+    
+    func testDeveIgnorarOSegundoLanceDoMesmoUserNoMesmoProduto() {
+        let leilao = Leilao(descricao: "Macbook Pro 2020 M1")
+        let denner = Usuario(nome: "Denner")
+        let gabriela = Usuario(nome: "Gabriela")
+        
+        leilao.proposta(oferta: Lances(usuario: denner, valor: 10.000))
+        leilao.proposta(oferta: Lances(usuario: denner, valor: 12.000))
+        leilao.proposta(oferta: Lances(usuario: gabriela, valor: 9.000))
+        leilao.proposta(oferta: Lances(usuario: gabriela, valor: 5.000))
+        
+        XCTAssertEqual(1, leilao.lance?.count)
+        
     }
 }
