@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE4495F226696300005CC8FF /* CriadorDeLeilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4495F126696300005CC8FF /* CriadorDeLeilao.swift */; };
+		DE4495F52669672A005CC8FF /* AvaliadorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */; };
 		DE559B502645740B00F2363B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B4F2645740B00F2363B /* AppDelegate.swift */; };
 		DE559B522645740B00F2363B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B512645740B00F2363B /* SceneDelegate.swift */; };
 		DE559B542645740B00F2363B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B532645740B00F2363B /* ViewController.swift */; };
@@ -19,7 +21,6 @@
 		DE559B882645752400F2363B /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B872645752400F2363B /* Usuarios.swift */; };
 		DE559B8A2645754700F2363B /* Leilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B892645754700F2363B /* Leilao.swift */; };
 		DE559B8C2645794200F2363B /* Avaliador.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B8B2645794200F2363B /* Avaliador.swift */; };
-		DE559B8E2645ADBF00F2363B /* AvaliadorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */; };
 		DECDD7E52667DC8C007F9A73 /* AuctionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559B692645740F00F2363B /* AuctionAppTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE4495F126696300005CC8FF /* CriadorDeLeilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriadorDeLeilao.swift; sourceTree = "<group>"; };
 		DE559B4C2645740B00F2363B /* auctionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = auctionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE559B4F2645740B00F2363B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE559B512645740B00F2363B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		DE559B5E2645740E00F2363B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE559B602645740E00F2363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE559B652645740F00F2363B /* auctionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = auctionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE559B692645740F00F2363B /* AuctionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionAppTests.swift; sourceTree = "<group>"; };
+		DE559B692645740F00F2363B /* AuctionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuctionAppTests.swift; path = auctionAppTests/AuctionAppTests.swift; sourceTree = SOURCE_ROOT; };
 		DE559B6B2645740F00F2363B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE559B702645740F00F2363B /* auctionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = auctionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE559B742645740F00F2363B /* auctionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auctionAppUITests.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		DE559B872645752400F2363B /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 		DE559B892645754700F2363B /* Leilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leilao.swift; sourceTree = "<group>"; };
 		DE559B8B2645794200F2363B /* Avaliador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avaliador.swift; sourceTree = "<group>"; };
-		DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliadorTests.swift; sourceTree = "<group>"; };
+		DE559B8D2645ADBF00F2363B /* AvaliadorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AvaliadorTests.swift; path = auctionAppTests/AvaliadorTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				DE559B872645752400F2363B /* Usuarios.swift */,
 				DE559B892645754700F2363B /* Leilao.swift */,
 				DE559B8B2645794200F2363B /* Avaliador.swift */,
+				DE4495F126696300005CC8FF /* CriadorDeLeilao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE559B542645740B00F2363B /* ViewController.swift in Sources */,
+				DE4495F226696300005CC8FF /* CriadorDeLeilao.swift in Sources */,
 				DE559B502645740B00F2363B /* AppDelegate.swift in Sources */,
 				DE559B522645740B00F2363B /* SceneDelegate.swift in Sources */,
 				DE559B862645751500F2363B /* Lances.swift in Sources */,
@@ -315,8 +319,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE559B8E2645ADBF00F2363B /* AvaliadorTests.swift in Sources */,
 				DECDD7E52667DC8C007F9A73 /* AuctionAppTests.swift in Sources */,
+				DE4495F52669672A005CC8FF /* AvaliadorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

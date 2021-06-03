@@ -6,12 +6,21 @@
 //
 
 import XCTest
+
 @testable import auctionApp
 
 class AvaliadorTests: XCTestCase {
-
+    
+    private var joao: Usuario!
+    private var maria: Usuario!
+    private var jose: Usuario!
+    private var leiloeiro: Avaliador!
+    
     override func setUpWithError() throws {
-
+        joao = Usuario(nome: "Joao")
+        maria = Usuario(nome: "Maria")
+        jose = Usuario(nome: "Jose")
+        leiloeiro = Avaliador( )
     }
 
     override func tearDownWithError() throws {
@@ -19,54 +28,45 @@ class AvaliadorTests: XCTestCase {
     }
 
     func testDeveEntenderLancesEmOrdemCrescente() throws {
-        let joao = Usuario(nome: "Joao")
-        let maria = Usuario(nome: "Maria")
-        let jose = Usuario(nome: "Jose")
-        
-        let leilao = Leilao(descricao: "Playstation 4")
-        
-        leilao.proposta(oferta: Lances(usuario: joao, valor: 500.0))
-        leilao.proposta(oferta: Lances(usuario: maria, valor: 1000.0))
-        leilao.proposta(oferta: Lances(usuario: jose, valor: 300.0))
-        
-        let leiloeiro = Avaliador( )
-        leiloeiro.avalia(leilao: leilao)
-        
-        print(leiloeiro.maiorLance( ))
-        print(leiloeiro.menorLance( ))
-        
+        let leilao = CriadorDeLeilao().para(descricao:  "Playstation 4")
+            .lance(joao, 500.0)
+            .lance(maria, 1000.0)
+            .lance(jose, 300.0).constroi()
+    
+        try? leiloeiro.avalia(leilao: leilao)
+    
         XCTAssertEqual(300.0, leiloeiro.menorLance())
         XCTAssertEqual(1000.0, leiloeiro.maiorLance())
     }
     
     func testDeveEntenderLeilaoComApenasUmLance() {
-        let joao =  Usuario(nome: "Joao")
-        let leilao = Leilao(descricao: "Playstation 4")
-        leilao.proposta(oferta: Lances(usuario: joao, valor: 1000.0))
+        let leilao = CriadorDeLeilao().para(descricao: "Playstation 4")
+            .lance(joao, 1000.0).constroi()
         
-        let leiloeiro = Avaliador( )
-        leiloeiro.avalia(leilao: leilao)
+        try? leiloeiro.avalia(leilao: leilao)
         
         XCTAssertEqual(1000.0, leiloeiro.menorLance())
         XCTAssertEqual(1000.0, leiloeiro.maiorLance())
     }
     
     func testDeveEncontrarOsTreisMaiores( ) {
-        let joao = Usuario(nome: "Joao")
-        let maria = Usuario(nome: "Maria")
-        let joaquim = Usuario(nome: "Joaquim")
-        
-        let leilao = Leilao(descricao: "Playstantion 4")
-        
-        leilao.proposta(oferta: Lances(usuario: joao, valor: 400.0))
-        leilao.proposta(oferta: Lances(usuario: maria, valor: 600.0))
-        leilao.proposta(oferta: Lances(usuario: joaquim, valor: 100.0))
-        
-        let leiloeiro = Avaliador( )
-        leiloeiro.avalia(leilao: leilao)
+        let leilao = CriadorDeLeilao().para(descricao:  "Playstation 4")
+            .lance(joao, 400.0)
+            .lance(maria, 600.0)
+            .lance(joao, 100.0).constroi()
+    
+        try? leiloeiro.avalia(leilao: leilao)
         
         let listaDeValores = leiloeiro.tresMaiores( )
         
         XCTAssertEqual(3, listaDeValores.count)
+    }
+    
+    func testDeveIgnorarLeilaoSemLance() {
+        let leilao = CriadorDeLeilao().para(descricao: "Playstation 4").constroi()
+    
+        XCTAssertThrowsError(try leiloeiro.avalia(leilao: leilao), "Não é possível avaliar um leilão sem lance") { (error) in
+            print(error.localizedDescription)
+        }
     }
 }
